@@ -42,7 +42,7 @@ class ProfileViewController: UIViewController {
         let decodedImage = UIImage(data: decodedData!)!
         
         imgUser.image = decodedImage
-        print(finalValue[5])
+        //print(finalValue[5])
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,12 +51,12 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func btnUpdateInformation(_ sender: Any) {
-        /*
         //let updatetext = "Select userimage,username,email,password,city,gender from User"
         let imgData = UIImageJPEGRepresentation(imgUser.image!, 1.0)!
         let strBase64 = imgData.base64EncodedString(options: .lineLength64Characters)
-        let updateText = "UPDATE Users SET username = '\(txtFldUsername.text!)', email = '\(txtFldEmail.text!)', password = '\(txtFldPassword.text!)', city = '\(txtFldCity.text!)', gender = '\(genderArray[sgmtGender.selectedSegmentIndex])', userimage = '\(strBase64)' WHERE userid = '\(finalValue[5])'"
-        if(dbObj.ExecuteCommand(with: updateText))
+        let updateText = "UPDATE User SET username = '\(txtFldUsername.text!)', email = '\(txtFldEmail.text!)', password = '\(txtFldPassword.text!)', city = '\(txtFldCity.text!)', gender = '\(genderArray[sgmtGender.selectedSegmentIndex])', userimage = '\(strBase64)' WHERE userid = \(finalValue[5])"
+        
+        if(dbOj.ExecuteCommand(with: updateText))
         {
             print("\n\n\tExecuted!")
             let alert = UIAlertController.init(title: "Success", message: "You updated successfuly, you can now login with these details", preferredStyle: .alert)
@@ -78,7 +78,7 @@ class ProfileViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             
         }
-        */
+        
     }
     
     

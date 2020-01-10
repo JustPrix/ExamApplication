@@ -63,8 +63,9 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         //print(type(of: imgData))
         let cmdText = "Insert into User(userimage,username,email,password,city,gender) values('\(strBase64)','\(txtFldUsername.text!)','\(txtFldEmail.text!)','\(txtFldPassword.text!)','\(txtFldCity.text!)','\(genderArray[sgmtGender.selectedSegmentIndex])')"
         
-        print(genderArray[sgmtGender.selectedSegmentIndex])
-        print(sgmtGender.selectedSegmentIndex)
+        
+        //print(genderArray[sgmtGender.selectedSegmentIndex])
+        //print(sgmtGender.selectedSegmentIndex)
         
         if(dbObj.ExecuteCommand(with: cmdText))
         {
