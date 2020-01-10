@@ -9,16 +9,67 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    @IBOutlet weak var txtFldUsername: UITextField!
+    @IBOutlet weak var txtFldPassword: UITextField!
+    
+    var dbObj:dbManager!
+    var value = [Any]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        dbObj = dbManager()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func swtchSecurePassword(_ sender: UISwitch) {
+        txtFldPassword.isSecureTextEntry = !(txtFldPassword.isSecureTextEntry)
+    }
+    
+    
+    @IBAction func btnLogin(_ sender: UIButton) {
+        //let queryTxt = "SELECT * from User where username = \"\(txtFldUsername.text!)\" AND password = \"\(txtFldPassword.text!)\""
+        let testQuery = "SELECT * from User where username = \"Mamamia\" AND password = \"mamamia\""
+        let id = dbObj.ExecuteQuery(with: testQuery)[0]
+        print(id.count)
+        
+        for key in id.keys {
+            //print(id[key]!)
+            self.value.append(id[key]!)
+            //self.value.append(id[key]!)
+        }
+        //print(type(of: value[3]))
+        //print(value)
+        performSegue(withIdentifier: "PassData", sender: sender)
+        /*
+        let city = value[0] as! String
+        let email = value[1] as! String
+        let password = value[2] as! String
+        let image = value[3] as! NSData
+        let gender = value[4] as! String
+        let userid = value[5] as! String
+        let username = value[6] as! String
+        
+        value = [Any]()
+        */
+        //this is working now, finish the login
+        
+        //print(id.keys[id.keys.startIndex])
+        //print(txtFldUsername.text!)
+        //print(txtFldPassword.text!)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as? ProfileViewController
+        vc?.finalValue = value
+    }
+    @IBAction func btnRegister(_ sender: UIButton) {
+        performSegue(withIdentifier: "RegisterView", sender: sender)
     }
     
 

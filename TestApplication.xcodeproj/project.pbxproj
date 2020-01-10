@@ -13,6 +13,14 @@
 		D194F59923BDE0CA0085F97A /* TestApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D194F59723BDE0CA0085F97A /* TestApplication.xcdatamodeld */; };
 		D194F59B23BDE0CA0085F97A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D194F59A23BDE0CA0085F97A /* Assets.xcassets */; };
 		D194F59E23BDE0CA0085F97A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D194F59C23BDE0CA0085F97A /* LaunchScreen.storyboard */; };
+		D194F5A723BDE2A40085F97A /* testDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D194F5A623BDE2A40085F97A /* testDB.db */; };
+		D194F5AC23BDE4E20085F97A /* dbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D194F5AB23BDE4E20085F97A /* dbManager.swift */; };
+		D194F5AF23BDE6BA0085F97A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D194F5AE23BDE6BA0085F97A /* libsqlite3.0.tbd */; };
+		D194F5B123BDEB6F0085F97A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D194F5B023BDEB6F0085F97A /* LoginViewController.swift */; };
+		D194F5B323BDEB7F0085F97A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D194F5B223BDEB7F0085F97A /* ProfileViewController.swift */; };
+		D194F5B523BDEB8E0085F97A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D194F5B423BDEB8E0085F97A /* RegisterViewController.swift */; };
+		D194F5B723BDEBAA0085F97A /* RootDisplayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D194F5B623BDEBAA0085F97A /* RootDisplayCollectionViewController.swift */; };
+		D19E357923C72B770062FCC2 /* RootCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19E357823C72B770062FCC2 /* RootCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,15 @@
 		D194F59A23BDE0CA0085F97A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D194F59D23BDE0CA0085F97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D194F59F23BDE0CA0085F97A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D194F5A623BDE2A40085F97A /* testDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = testDB.db; sourceTree = "<group>"; };
+		D194F5A823BDE4A00085F97A /* TestApplication-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApplication-Bridging-Header.h"; sourceTree = "<group>"; };
+		D194F5AB23BDE4E20085F97A /* dbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbManager.swift; sourceTree = "<group>"; };
+		D194F5AE23BDE6BA0085F97A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		D194F5B023BDEB6F0085F97A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D194F5B223BDEB7F0085F97A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D194F5B423BDEB8E0085F97A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D194F5B623BDEBAA0085F97A /* RootDisplayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDisplayCollectionViewController.swift; sourceTree = "<group>"; };
+		D19E357823C72B770062FCC2 /* RootCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D194F5AF23BDE6BA0085F97A /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 			children = (
 				D194F58F23BDE0CA0085F97A /* TestApplication */,
 				D194F58E23BDE0CA0085F97A /* Products */,
+				D194F5AD23BDE6BA0085F97A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +75,7 @@
 		D194F58F23BDE0CA0085F97A /* TestApplication */ = {
 			isa = PBXGroup;
 			children = (
+				D194F5A523BDE2880085F97A /* dbHandle */,
 				D194F59023BDE0CA0085F97A /* AppDelegate.swift */,
 				D194F59223BDE0CA0085F97A /* ViewController.swift */,
 				D194F59423BDE0CA0085F97A /* Main.storyboard */,
@@ -63,8 +83,31 @@
 				D194F59C23BDE0CA0085F97A /* LaunchScreen.storyboard */,
 				D194F59F23BDE0CA0085F97A /* Info.plist */,
 				D194F59723BDE0CA0085F97A /* TestApplication.xcdatamodeld */,
+				D194F5B023BDEB6F0085F97A /* LoginViewController.swift */,
+				D194F5B223BDEB7F0085F97A /* ProfileViewController.swift */,
+				D194F5B423BDEB8E0085F97A /* RegisterViewController.swift */,
+				D194F5B623BDEBAA0085F97A /* RootDisplayCollectionViewController.swift */,
+				D19E357823C72B770062FCC2 /* RootCollectionViewCell.swift */,
 			);
 			path = TestApplication;
+			sourceTree = "<group>";
+		};
+		D194F5A523BDE2880085F97A /* dbHandle */ = {
+			isa = PBXGroup;
+			children = (
+				D194F5A623BDE2A40085F97A /* testDB.db */,
+				D194F5A823BDE4A00085F97A /* TestApplication-Bridging-Header.h */,
+				D194F5AB23BDE4E20085F97A /* dbManager.swift */,
+			);
+			path = dbHandle;
+			sourceTree = "<group>";
+		};
+		D194F5AD23BDE6BA0085F97A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D194F5AE23BDE6BA0085F97A /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +142,7 @@
 				TargetAttributes = {
 					D194F58C23BDE0CA0085F97A = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -129,6 +173,7 @@
 				D194F59E23BDE0CA0085F97A /* LaunchScreen.storyboard in Resources */,
 				D194F59B23BDE0CA0085F97A /* Assets.xcassets in Resources */,
 				D194F59623BDE0CA0085F97A /* Main.storyboard in Resources */,
+				D194F5A723BDE2A40085F97A /* testDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19E357923C72B770062FCC2 /* RootCollectionViewCell.swift in Sources */,
+				D194F5B323BDEB7F0085F97A /* ProfileViewController.swift in Sources */,
+				D194F5B723BDEBAA0085F97A /* RootDisplayCollectionViewController.swift in Sources */,
 				D194F59323BDE0CA0085F97A /* ViewController.swift in Sources */,
+				D194F5B523BDEB8E0085F97A /* RegisterViewController.swift in Sources */,
 				D194F59123BDE0CA0085F97A /* AppDelegate.swift in Sources */,
 				D194F59923BDE0CA0085F97A /* TestApplication.xcdatamodeld in Sources */,
+				D194F5B123BDEB6F0085F97A /* LoginViewController.swift in Sources */,
+				D194F5AC23BDE4E20085F97A /* dbManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,12 +329,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXSDPVT397;
 				INFOPLIST_FILE = TestApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bgkv.TestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestApplication/dbHandle/TestApplication-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,12 +347,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXSDPVT397;
 				INFOPLIST_FILE = TestApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bgkv.TestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestApplication/dbHandle/TestApplication-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
