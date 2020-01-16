@@ -22,7 +22,7 @@ class RootDisplayCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         dbObj = dbManager()
 
@@ -61,12 +61,18 @@ class RootDisplayCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! RootCollectionViewCell
     
         // Configure the cell
-        var a=0
-        while (a != selectedUsers.count) {
-            
+        let user = selectedUsers[indexPath.item]
+        var value = [Any]()
+        
+        for key in user.keys {
+            //print(id[key]!)
+            value.append(user[key]!)
+            //self.value.append(id[key]!)
         }
-        //cell.lblName =
-        //cell.imgUser =
+        cell.lblName.text = value[6] as? String
+        let decodedData = Data(base64Encoded: value[3] as! String, options: .ignoreUnknownCharacters)
+        let decodedImage = UIImage(data: decodedData!)!
+        cell.imgUser.image = decodedImage
     
         return cell
     }

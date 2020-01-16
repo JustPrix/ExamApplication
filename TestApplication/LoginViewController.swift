@@ -37,12 +37,22 @@ class LoginViewController: UIViewController {
             let queryTxt = "SELECT * from User where username = \"\(txtFldUsername.text!)\" AND password = \"\(txtFldPassword.text!)\""
             //let testQuery = "SELECT * from User where username = \"Test\" AND password = \"test1\""
             
-            let id = dbObj.ExecuteQuery(with: queryTxt)[0]
+            let id = dbObj.ExecuteQuery(with: queryTxt)
             //print(id.count)
             
-            for key in id.keys {
+            if (id.count == 0){
+                let alert = UIAlertController.init(title: "Error", message: "Details not found, please try again or register a new user!", preferredStyle: .alert)
+                let continueAction = UIAlertAction.init(title: "Continue", style: .default, handler: { (alert) in
+                    self.dismiss(animated: true, completion: nil)
+                })
+                alert.addAction(continueAction)
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            for key in id[0].keys {
                 //print(id[key]!)
-                self.value.append(id[key]!)
+                self.value.append(id[0][key]!)
                 //self.value.append(id[key]!)
             }
             //print(type(of: value[3]))
@@ -67,7 +77,7 @@ class LoginViewController: UIViewController {
         }
         else{
             print("\n\n\t\tError!")
-            let alert = UIAlertController.init(title: "Error", message: "Some mistake has occurred, please try again", preferredStyle: .alert)
+            let alert = UIAlertController.init(title: "Error", message: "Please enter username and password!", preferredStyle: .alert)
             let continueAction = UIAlertAction.init(title: "Continue", style: .default, handler: { (alert) in
                 self.dismiss(animated: true, completion: nil)
             })

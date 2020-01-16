@@ -81,6 +81,10 @@ class ProfileViewController: UIViewController {
         
     }
     
+
+    @IBAction func btnListUsers(_ sender: UIButton) {
+        performSegue(withIdentifier: "listUsers", sender: sender)
+    }
     
     /*
     // MARK: - Navigation
