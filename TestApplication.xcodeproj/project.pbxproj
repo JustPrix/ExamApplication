@@ -21,6 +21,7 @@
 		D194F5B523BDEB8E0085F97A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D194F5B423BDEB8E0085F97A /* RegisterViewController.swift */; };
 		D194F5B723BDEBAA0085F97A /* RootDisplayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D194F5B623BDEBAA0085F97A /* RootDisplayCollectionViewController.swift */; };
 		D19E357923C72B770062FCC2 /* RootCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19E357823C72B770062FCC2 /* RootCollectionViewCell.swift */; };
+		D1AFD57723D06B4400D94CF6 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFD57623D06B4400D94CF6 /* SplashScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		D194F5B423BDEB8E0085F97A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D194F5B623BDEBAA0085F97A /* RootDisplayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDisplayCollectionViewController.swift; sourceTree = "<group>"; };
 		D19E357823C72B770062FCC2 /* RootCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCollectionViewCell.swift; sourceTree = "<group>"; };
+		D1AFD57623D06B4400D94CF6 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				D194F5B423BDEB8E0085F97A /* RegisterViewController.swift */,
 				D194F5B623BDEBAA0085F97A /* RootDisplayCollectionViewController.swift */,
 				D19E357823C72B770062FCC2 /* RootCollectionViewCell.swift */,
+				D1AFD57623D06B4400D94CF6 /* SplashScreenViewController.swift */,
 			);
 			path = TestApplication;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				D194F59123BDE0CA0085F97A /* AppDelegate.swift in Sources */,
 				D194F59923BDE0CA0085F97A /* TestApplication.xcdatamodeld in Sources */,
 				D194F5B123BDEB6F0085F97A /* LoginViewController.swift in Sources */,
+				D1AFD57723D06B4400D94CF6 /* SplashScreenViewController.swift in Sources */,
 				D194F5AC23BDE4E20085F97A /* dbManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
