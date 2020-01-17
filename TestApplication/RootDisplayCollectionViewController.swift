@@ -77,6 +77,16 @@ class RootDisplayCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    @IBAction func barBtnLogOut(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Log Out", message: "Are you sure?", preferredStyle: .alert)
+        let cancelAlert = UIAlertAction(title: "Stay Here", style: .default, handler: nil)
+        let continueAlert = UIAlertAction(title: "Log Out", style: .destructive) { (alert) in
+            self.performSegue(withIdentifier: "logOut", sender: sender)
+        }
+        alert.addAction(cancelAlert)
+        alert.addAction(continueAlert)
+        self.present(alert, animated: true, completion: nil)
+    }
     // MARK: UICollectionViewDelegate
 
     /*

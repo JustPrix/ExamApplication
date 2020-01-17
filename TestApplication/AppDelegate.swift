@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        //SQLite code to connect the app and database on the device
         let dirs = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         self.dbLocation = dirs[0] + "/testDB.db"
         
@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         print(dbLocation)
+        //Line used to make te splash screen last for 5 more seconds
+        sleep(5)
         
         return true
     }
